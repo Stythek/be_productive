@@ -55,19 +55,19 @@ while True:
               str(timer_count))
         print(Fore.BLACK + Back.MAGENTA +
               'No interuptions for ' + str(timer_minutes) + ' minutes!')
-        for i in trange((timer_minutes * 1), bar_format="{l_bar}%s{bar}%s{r_bar}" % (Fore.MAGENTA, Fore.RESET)):
+        for i in trange((timer_minutes * 60), bar_format="{l_bar}%s{bar}%s{r_bar}" % (Fore.MAGENTA, Fore.RESET)):
             time.sleep(1)
         playsound('./sounds/alarm_timer.wav')
         if timer_count <= 3:
             print(Fore.BLACK + Back.GREEN + 'Short break, ' +
                   str(break_short_minutes) + ' minutes!')
-            for i in trange((break_short_minutes * 1), bar_format="{l_bar}%s{bar}%s{r_bar}" % (Fore.GREEN, Fore.RESET)):
+            for i in trange((break_short_minutes * 60), bar_format="{l_bar}%s{bar}%s{r_bar}" % (Fore.GREEN, Fore.RESET)):
                 time.sleep(1)
             playsound('./sounds/alarm_break_short.wav')
         else:
             print(Fore.BLACK + Back.GREEN + 'Long break, ' +
                   str(break_long_minutes) + ' minutes!')
-            for i in trange((break_long_minutes * 1), bar_format="{l_bar}%s{bar}%s{r_bar}" % (Fore.GREEN, Fore.RESET)):
+            for i in trange((break_long_minutes * 60), bar_format="{l_bar}%s{bar}%s{r_bar}" % (Fore.GREEN, Fore.RESET)):
                 time.sleep(1)
             playsound('./sounds/alarm_break_long.wav')
         timer_count += 1
