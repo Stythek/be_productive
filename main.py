@@ -46,7 +46,9 @@ while True:
             timer_count = 1
             pass
         else:
-            print(Fore.CYAN + Style.BRIGHT + 'You were productive for ' +
+            print(Fore.BLACK + Back.MAGENTA + 'Productive: ' +
+                  str(4 * timer_minutes) + ' minutes!')
+            print(Fore.BLACK + Back.GREEN + 'Breaks: ' +
                   str(4 * timer_minutes) + ' minutes!')
         break
 
