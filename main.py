@@ -53,6 +53,7 @@ while True:
                   str(overall_runs * 4 * timer_minutes) + ' minutes!')
             print(Fore.BLACK + Back.GREEN + 'Breaks: ' +
                   str(overall_runs * (3 * break_short_minutes + break_long_minutes)) + ' minutes!')
+            input("Press Enter to exit.")
             break
 
     while timer_count <= iterations:
