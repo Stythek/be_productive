@@ -88,7 +88,10 @@ while True:
               'No interuptions for ' + str(timer_minutes) + ' minutes!')
         for i in trange((timer_minutes * seconds_in_timer), bar_format="{l_bar}%s{bar}%s{r_bar}" % (Fore.MAGENTA, Fore.RESET)):
             time.sleep(1)
-        playsound('./sounds/alarm_timer.wav')
+        try:
+            playsound('./sounds/alarm_timer.wav')
+        except Exception as e:
+            pass
 
         # Run the short break
         if timer_cycles <= 3:
@@ -100,7 +103,10 @@ while True:
                 input()
             for i in trange((break_short_minutes * seconds_in_timer), bar_format="{l_bar}%s{bar}%s{r_bar}" % (Fore.GREEN, Fore.RESET)):
                 time.sleep(1)
-            playsound('./sounds/alarm_break_short.wav')
+            try:
+                playsound('./sounds/alarm_break_short.wav')
+            except Exception as e:
+                pass
 
         # Run the long break
         else:
@@ -112,7 +118,10 @@ while True:
                 input()
             for i in trange((break_long_minutes * seconds_in_timer), bar_format="{l_bar}%s{bar}%s{r_bar}" % (Fore.YELLOW, Fore.RESET)):
                 time.sleep(1)
-            playsound('./sounds/alarm_break_long.wav')
+            try:
+                playsound('./sounds/alarm_break_long.wav')
+            except Exception as e:
+                pass
 
         timer_cycles += 1
     overall_cycles += 1
